@@ -16,7 +16,7 @@ class CandidatureResource extends JsonResource
     {
         return [
             "code" => $this->code,
-            "program_id" =>  $this->whenLoaded("program_id"),
+            "program_id" =>  $this->whenLoaded("program"),
             "user_id" => $this->whenLoaded("user"),
         ];
     }
