@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Program extends Model
+class Candidature extends Model
 {
     protected $fillable = [
-        "description",
-        "startdate",
-        "enddate",
-        "status",
+        "code",
+        "program_id",
+        "user_id",
     ];
 }
