@@ -11,4 +11,12 @@ class Candidature extends Model
         "program_id",
         "user_id",
     ];
+
+    public function program(){
+        return $this->belongsTo(Program::class, "program_id", "id");
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, "user_id", "id");
+    }
 }
