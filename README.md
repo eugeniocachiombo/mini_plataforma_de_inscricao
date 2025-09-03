@@ -9,7 +9,7 @@ Este sistema foi desenvolvido para a **gestão de Programas, Candidatos e Candid
 ### 1️⃣ Clonar o repositório  
 ```bash
 git clone https://github.com/eugeniocachiombo/mini_plataforma_de_inscricao.git
-cd teu-repositorio
+cd mini_plataforma_de_inscricao
 ```
 
 ### 2️⃣ Instalar dependências do Laravel  
