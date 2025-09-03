@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Api\v1\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -119,5 +120,22 @@ class UserController extends Controller
         }
         $user->delete();
         return response()->json(["message" => "Candidato eliminado com sucesso."], 204);
+    }
+
+    public function login(Request $request){
+        $credencials = [
+            "email" => $request->email,
+            "password" => $request->password,
+        ];
+
+        if (Auth::attempt($credencials)) {
+            $token = $request->user()->createToken('api_token');
+            return response()->json([
+                'access_token' => $token->plainTextToken,
+                'type_token' => "bearer",
+            ], 200);
+        }
+
+        return response()->json(['message' => "Credenciais não encontradas"], 404);
     }
 }

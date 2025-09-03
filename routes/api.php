@@ -14,4 +14,5 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('candidatos', UserController::class);
 	Route::apiResource('programas', ProgramController::class);
     Route::apiResource('candidaturas', CandidatureController::class);
+    Route::post('/autenticação', [UserController::class, "login"]);
 });
