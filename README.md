@@ -18,6 +18,7 @@ composer install
 ```
 
 ### 3️⃣ Criar o ficheiro de ambiente  
+#### (Clonar arquivo .env.example e nomear como .env)
 ```bash
 cp .env.example .env
 ```
