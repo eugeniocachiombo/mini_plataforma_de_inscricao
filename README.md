@@ -8,7 +8,7 @@ Este sistema foi desenvolvido para a **gestão de Programas, Candidatos e Candid
 
 ### 1️⃣ Clonar o repositório  
 ```bash
-git clone https://github.com/teu-usuario/teu-repositorio.git
+git clone https://github.com/eugeniocachiombo/mini_plataforma_de_inscricao.git
 cd teu-repositorio
 ```
 
